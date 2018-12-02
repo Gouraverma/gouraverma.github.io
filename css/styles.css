@@ -1,0 +1,367 @@
+/*
+* ----------------------------------------------------------------------------------------
+* GENERAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
+
+/*
+* ----------------------------------------------------------------------------------------
+* GLOBAL STYLE
+* ----------------------------------------------------------------------------------------
+*/
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+p {
+    line-height: 28px;
+}
+
+/* Links */
+a {
+    color: #575757;
+    text-decoration: none;
+}
+a:hover {
+    color: #00b2e2;
+}
+
+/* Button */
+.button {
+    border: 1px solid #1f1f1f;
+    border-radius: 29px;
+    display: block;
+    margin: 0 auto;
+    padding: 16px 0;
+    width: 235px;
+    margin-top: 50px;
+    color: #1f1f1f;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    text-decoration: none;
+    background: transparent;
+    -moz-transition: all 300ms ease-out;
+    -webkit-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+.button:hover {
+    color: #f7f7f7;
+    background: #1f1f1f;
+    border: 1px solid #1f1f1f;
+    width: 250px;
+}
+
+/* Helper Classes */
+.clear {
+    clear: both;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* PAGE STYLE
+* ----------------------------------------------------------------------------------------
+*/
+.wrapper {
+    width: 960px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+#header {
+    background: url('../images/pattern.png') repeat;
+    background-color: #1f1f1f;
+}
+#header .content {
+    padding: 60px 0;
+    text-align: center;
+}
+#header .content h5,
+#header .content h3 {
+    font-weight: 400;
+    color: #f7f7f7;
+    margin: 0;
+}
+#header .content h5 {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+#header .content h3 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 33px;
+}
+#header .content h5:after {
+    height: 1px;
+    display: block;
+    width: 10%;
+    background: rgba(255, 255, 255, 0.44);
+    content: '';
+    margin: 16px auto;
+}
+#header .content img {
+    margin-top: 16px;
+    border-radius: 100%;
+    width: 80px;
+    height: auto;
+}
+
+/* Portfolio */
+#portfolio .content {
+    padding: 60px 0;
+}
+#portfolio .grid {
+    position: relative;
+    margin: 0 auto;
+    max-width: 960px;
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+}
+#portfolio .grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 280px;
+    max-width: 480px;
+    max-height: 360px;
+    width: 48%;
+    background: red;
+    text-align: center;
+    cursor: pointer;
+}
+#portfolio .grid figure img {
+    position: relative;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    opacity: 1;
+}
+#portfolio .grid figure figcaption {
+    padding: 0;
+    color: #fff;
+    font-size: 1.25em;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+#portfolio .grid figure figcaption::before,
+#portfolio .grid figure figcaption::after {
+    pointer-events: none;
+}
+#portfolio .grid figure figcaption,
+#portfolio .grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#portfolio .grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+#portfolio .grid figure h3 {
+    /*word-spacing: -0.15em;*/
+    font-weight: 400;
+}
+#portfolio .grid figure h3 span {
+    font-weight: 800;
+}
+#portfolio .grid figure h3,
+#portfolio .grid figure p {
+    margin: 0;
+}
+#portfolio .grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+
+#portfolio figure.efect-rich {
+    background: red;
+}
+#portfolio figure.efect-rich img {
+    opacity: 1;
+    -moz-transition: opacity 0.35s;
+    -webkit-transition: opacity 0.35s;
+    -o-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+#portfolio figure.efect-rich:hover img {
+    opacity: 0.2;
+}
+#portfolio figure.efect-rich figcaption::before,
+#portfolio figure.efect-rich figcaption::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    -moz-transition: opacity 0.35s, -moz-transform 0.35s;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, -o-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+#portfolio figure.efect-rich figcaption::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -moz-transform: scale(0, 1);
+    -webkit-transform: scale(0, 1);
+    -o-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
+#portfolio figure.efect-rich figcaption::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -moz-transform: scale(1, 0);
+    -webkit-transform: scale(1, 0);
+    -o-transform: scale(1, 0);
+    transform: scale(1, 0);
+}
+#portfolio figure.efect-rich h3 {
+    padding-top: 30%;
+    opacity:0;
+    -moz-transition: -moz-transform 0.35s;
+    -webkit-transition: -webkit-transform 0.35s;
+    -o-transition: -o-transform 0.35s;
+    transition: transform 0.35s;
+    -moz-transform: translate3d(0, -20px, 0);
+    -webkit-transform: translate3d(0, -20px, 0);
+    -o-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+}
+#portfolio figure.efect-rich p {
+    padding: 20px 2.5em;
+    opacity: 0;
+    -moz-transition: opacity 0.35s, -moz-transform 0.35s;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, -o-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -moz-transform: translate3d(0, 20px, 0);
+    -webkit-transform: translate3d(0, 20px, 0);
+    -o-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+}
+#portfolio figure.efect-rich:hover figcaption::before,
+#portfolio figure.efect-rich:hover figcaption::after {
+    opacity: 1;
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+#portfolio figure.efect-rich:hover h3,
+#portfolio figure.efect-rich:hover p {
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/* Call To Action  */
+#cat {
+    background: #f1f1f1;
+}
+#cat .content {
+    padding: 90px 0;
+    text-align: center;
+}
+#cat .content h1 {
+    font-size: 32px;
+    font-weight: 500;
+    color: #1f1f1f;
+    margin-top: 0;
+}
+#cat .content p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    max-width: 720px;
+    margin: 0 auto;
+    color: #1f1f1f;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* FOOTER STYLE
+* ----------------------------------------------------------------------------------------
+*/
+#footer {
+    height: auto;
+    background: url('../img/pattern.png') repeat;
+    background-color: #1f1f1f;
+    text-align: center;
+}
+#footer .content {
+    padding: 60px 0;
+}
+#footer .col {
+    width: 33%;
+    float: left;
+}
+#footer p {
+    color: #575757;
+    font-weight: 300;
+}
+#footer a {
+    color: #575757;
+    -moz-transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -0-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+#footer a:hover {
+    color: #00b2e2;
+}
+#footer .social i {
+    margin: 0 12px;
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    position: relative;
+    top: 18px;
+    font-size: 18px;
+}
+#footer .location i {
+    padding-right: 8px;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* MEDIA STYLE
+* ----------------------------------------------------------------------------------------
+*/
+@media screen and (max-width: 50em) {
+    #portfolio .grid figure {
+        display: inline-block;
+        float: none;
+        margin: 10px auto;
+        width: 100%;
+    }
+    #footer .col {
+        width: 100%;
+        float: none;
+        margin: 10px auto;
+    }
+}
