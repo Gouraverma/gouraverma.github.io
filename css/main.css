@@ -384,6 +384,9 @@ section.intro img {
 }
 
 @media (max-width: 768px) {
+    section.intro {
+        height: 90vh;
+    }
     section.intro h1 {
         font-size: 60px;
         line-height: 1.1;
